@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Welcome, <span id="userName"></span></h1>
+        <button id="logoutBtn">Logout</button>
+      </header>
+
+      <div class="dashboard">
+        <div class="stats">
+          <div class="stat-card">
+            <h3>Cylinders Remaining</h3>
+            <p id="cylindersRemaining">12</p>
+          </div>
+          <div class="stat-card">
+            <h3>Account Balance</h3>
+            <p id="accountBalance">₹0</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button onclick="window.location.href='booking.html'">
+            Book Cylinder
+          </button>
+          <button onclick="window.location.href='history.html'">
+            View History
+          </button>
+        </div>
+
+        <div class="notifications">
+          <h2>Notifications</h2>
+          <ul id="notificationList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/user.js"></script>
+  </body>
+</html>
